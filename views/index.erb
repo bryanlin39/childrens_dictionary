@@ -1,6 +1,6 @@
 <div class='container row'>
   <div class='col-md-6' id='words_list'>
-    <h2>Your Dictionary:</h2>
+    <h2>Dictionary:</h2>
     <ul>
       <% @words.each() do |word| %>
       <li><a href='/word/<%= word.id() %>'><%= word.word_input() %></a></li>
@@ -15,7 +15,7 @@
         <label for="inputted_word">Word:</label>
         <input type="text" name="inputted_word" id="inputted_word" class="form-control" required>
       </div>
-      <button type="submit" class="btn btn-outline-success" name="submit">Add Word</button>
+      <button type="submit" class="btn btn-outline-primary" name="submit">Add Word</button>
     </form>
   </div>
 </div>
