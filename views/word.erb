@@ -1,0 +1,23 @@
+<h1><%= @word.word_input %></h1>
+
+<div class="container row">
+  <div class="col-md-6" id="definitions_list">
+    <h2>Definitions:</h2>
+    <ul>
+      <% @definitions.each() do |definition| %>
+      <li><%= definition.definition_input() %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="col-md-6" id="add_definition">
+    <h2>Add a definition for <%= @word.word_input() %>:</h2>
+    <form action='/definition_form/<%= @word.id() %>' method='post'>
+      <div class='form-group'>
+        <label for="inputted_definition">Definition:</label>
+        <input type="text" name="inputted_definition" id="inputted_definition" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-outline-success" name="submit">Add Definition</button>
+    </form>
+  </div>
+</div>
