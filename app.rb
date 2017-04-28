@@ -19,6 +19,7 @@ post('/word_form') do
 end
 
 get('/word/:id') do
+  @words = Word.all()
   word_id = params['id'].to_i()
   @word = Word.find(word_id)
   @definitions = @word.definitions()

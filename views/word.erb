@@ -1,25 +1,40 @@
-<div class="jumbotron" id="word_title">
-  <h1><%= @word.word_input %></h1>
-</div>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-<div class="container row">
-  <div class="col-md-6" id="definitions_list">
-    <h2>Definitions of <%= @word.word_input %>:</h2>
-    <ol>
-      <% @definitions.each() do |definition| %>
-      <li><%= definition.definition_input() %></li>
-      <% end %>
-    </ol>
+<div class="container content">
+  <div class="jumbotron" id="word_title">
+    <h1><%= @word.word_input %></h1>
   </div>
 
-  <div class="col-md-6" id="add_definition">
-    <h2>Add a definition:</h2>
-    <form action='/definition_form/<%= @word.id() %>' method='post'>
-      <div class='form-group'>
-        <label for="inputted_definition">Definition:</label>
-        <input type="text" name="inputted_definition" id="inputted_definition" class="form-control" required>
-      </div>
-      <button type="submit" class="btn btn-outline-primary" name="submit">Add Definition</button>
-    </form>
+  <div class="container row">
+    <div class="col-md-6" id="definitions_list">
+      <h2>Definitions of <%= @word.word_input %>:</h2>
+      <ol>
+        <% @definitions.each() do |definition| %>
+        <li><%= definition.definition_input() %></li>
+        <% end %>
+      </ol>
+    </div>
+
+    <div class="col-md-6" id="add_definition">
+      <h2>Add a definition:</h2>
+      <form action='/definition_form/<%= @word.id() %>' method='post'>
+        <div class='form-group'>
+          <label for="inputted_definition">Definition:</label>
+          <input type="text" name="inputted_definition" id="inputted_definition" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-outline-primary" name="submit">Add Definition</button>
+      </form>
+    </div>
   </div>
 </div>
