@@ -6,12 +6,15 @@
 
 ## Description
 
-Children's Dictionary is a web application that builds a dictionary by creating Definition objects within Word objects. Access the webpage directly from .
+Children's Dictionary is a web application that builds a dictionary by creating Definition objects within Word objects. Access the webpage directly from https://rocky-shore-15054.herokuapp.com/.
 
 ## Setup/Installation Requirements
 
 * Clone the repository (https://github.com/bryanlin39/childrens_dictionary.git)
-* Open in any web browser
+* Install all gems (sinatra, sinatra-contrib, rspec, capybara, pry, launchy) by using "bundle"
+* Run Sinatra by typing "ruby app.rb" in the terminal
+* Open any web browser
+* Navigate to the application home page by entering "localhost:4567" in the URL
 
 ## Known Bugs
 
