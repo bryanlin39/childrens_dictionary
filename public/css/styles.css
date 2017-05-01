@@ -1,5 +1,6 @@
 body {
   background-color: #c7d6dd;
+  margin-bottom: 30px;
 }
 
 #heading {
@@ -35,4 +36,10 @@ a {
   font-style: italic;
   margin-bottom: 20px;
   color: #085477;
+}
+
+#word_title img {
+  max-height: 50px;
+  max-width: auto;
+  object-fit: contain;
 }

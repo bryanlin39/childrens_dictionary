@@ -2,12 +2,13 @@ class Word
 
   @@words = []
 
-  attr_accessor(:word_input, :id, :definitions)
+  attr_accessor(:word_input, :id, :definitions, :picture)
 
   def initialize(attributes)
     @word_input = attributes[:word_input]
     @id = @@words.length() + 1
     @definitions = []
+    @picture = attributes[:picture]
   end
 
   def self.all
@@ -35,5 +36,5 @@ class Word
   def add_definition(definition)
     @definitions.push(definition)
   end
-
+  
 end
