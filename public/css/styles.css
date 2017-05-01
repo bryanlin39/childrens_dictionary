@@ -42,4 +42,5 @@ a {
   max-height: 50px;
   max-width: auto;
   object-fit: contain;
+  margin-left: 15px;
 }

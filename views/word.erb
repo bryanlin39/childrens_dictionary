@@ -13,10 +13,11 @@
 
 <div class="container content">
   <div class="jumbotron" id="word_title">
-    <h1><%= @word.word_input %></h1>
+    <h1><%= @word.word_input %>
     <% if @word.picture() != "" %>
     <img src='<%= @word.picture() %>' alt='<%= @word.word_input %>'>
     <% end %>
+    </h1>
   </div>
 
   <div class="container row">
