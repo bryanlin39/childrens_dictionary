@@ -1,0 +1,12 @@
+post('/search_bar/:search_word') do
+  inputted_search = params[:search_word]
+  @word = Word.search(inputted_search)
+  @definitions = @word.definitions
+  erb(:word)
+end
+
+
+<form class="form-inline my-2 my-lg-0" action='/search_bar/<%= @word.word_input() %>'>
+  <input class="form-control mr-sm-2" type="text" placeholder="Search">
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
