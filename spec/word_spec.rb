@@ -80,4 +80,12 @@ describe(Word) do
     end
   end
 
+  describe('.search') do
+    it('returns the word based on the inputted search word') do
+      test_word = Word.new({:word_input => 'cat'})
+      test_word.save()
+      expect(Word.search('cat')).to(eq(test_word))
+    end
+  end
+
 end

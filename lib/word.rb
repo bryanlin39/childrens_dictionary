@@ -37,10 +37,20 @@ class Word
     @definitions.push(definition)
   end
 
-  def self.sort_alphabetically()
+  def self.sort_alphabetically
     @words_sorted = @@words.sort_by do |word|
       word.word_input()
     end
+  end
+
+  def self.search(search_word)
+    found_word = nil
+    @@words.each() do |word|
+      if word.word_input() == search_word
+        found_word = word
+      end
+    end
+    found_word
   end
 
 end
