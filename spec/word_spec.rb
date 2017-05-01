@@ -70,4 +70,14 @@ describe(Word) do
     end
   end
 
+  describe('.sort_alphabetically') do
+    it('sorts the words in the words class variable alphabetically and returns all of the sorted words') do
+      test_word1 = Word.new({:word_input => 'dog'})
+      test_word1.save()
+      test_word2 = Word.new({:word_input => 'cat'})
+      test_word2.save()
+      expect(Word.sort_alphabetically()).to(eq([test_word2, test_word1]))
+    end
+  end
+
 end

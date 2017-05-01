@@ -36,5 +36,11 @@ class Word
   def add_definition(definition)
     @definitions.push(definition)
   end
-  
+
+  def self.sort_alphabetically()
+    @words_sorted = @@words.sort_by do |word|
+      word.word_input()
+    end
+  end
+
 end

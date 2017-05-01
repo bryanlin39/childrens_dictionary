@@ -36,3 +36,8 @@ post('/definition_form/:id') do
   @definitions = @word.definitions()
   erb(:word)
 end
+
+get('/sorted_alphabetically') do
+  @words = Word.sort_alphabetically()
+  erb(:index)
+end
